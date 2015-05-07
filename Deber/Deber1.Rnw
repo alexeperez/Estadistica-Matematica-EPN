@@ -1,0 +1,154 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small ESTADÍSTICA MATEMÁTICA}}\\
+\textsf{\textbf{\small DEBER 01}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Fecha entrega: 2015/05/12}
+\end{flushright}
+
+\begin{center}
+\textsf{\textbf{\small EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+% Ejercicio 1
+\item[\bf{1.}] Demestre que la familia de distribuciones $Gamma(\alpha,\lambda)$ con $\alpha,\lambda$
+desconocidos es una familia exponencial.
+
+% Ejercicio 2
+\item[\bf{2.}] Demestre que la familia de distribuciones $Binomial(n,\theta)$ con $\theta$ desconocido
+es una familia exponencial. Encuentre la esperanza y la varianza del estadístico $T(X)$ respectivo.
+
+
+
+
+% Ejercicio 3
+\item[\bf{3.}] Suponga que $X_1,\dots,X_n$ son variables aleatorias $i.i.d.$ con función de densidad:
+
+\begin{equation*}
+        f(x; \theta_1,\theta_2) =\left\{\begin{array}{lll} a(\theta_1,\theta_2)h(x), &\mbox{si}\, \theta_1 \leq x \leq \theta_2,\\
+             	                             0,  &\mbox{caso contrario.}
+									\end{array}
+					\right.
+\end{equation*}
+
+donde $h(x)$ es una función conocida definida en los reales.
+
+\begin{enumerate}
+\item[\bf{a.}] Demuestre que:
+\begin{equation*}
+        a(\theta_1,\theta_2)= \Big(\int_{\theta_1}^{\theta_2} h(x) dx\Big)^{-1}
+\end{equation*}
+
+\item[\bf{b.}] Demuestre que $(X_{(1)}, X_{(n)})$ es suficiente para $(\theta_1, \theta_2)$.
+\end{enumerate}
+
+
+% Ejercicio 4
+\item[\bf{2.}] Suponga que $X_1,\dots,X_n$ son variables aleatorias $i.i.d.$ uniformes en el intervalo $[0,\theta]$
+con $\theta >0$. Sean $X_{(1)} = min(X_1,\dots,X_n)$ y $X_{(n)} = max(X_1,\dots,X_n)$.
+
+\begin{enumerate}
+\item[\bf{a.}] ?`$X_{(1)}$ es ancilar para  $\theta$?
+\item[\bf{b.}] ?`$X_{(n)}$ es ancilar para  $\theta$? 
+\end{enumerate}
+
+\emph{Un estadístico $T$ se dice ancilar para $\theta$ si su distribución (función de densidad) 
+no depende de $\theta$.}
+
+
+% Ejercicio 5
+\item[\bf{3.}] Suponga que $X_1,\dots,X_n$ son variables aleatorias $i.i.d.$ con función de densidad:
+
+\begin{equation*}
+        f(x;\mu, \theta) =\left\{\begin{array}{lll} \frac{1}{2 \theta}, &\mbox{si}\, \mu-\theta \leq x \leq \mu+\theta,\\
+                                                  0,  &\mbox{caso contrario.}
+									\end{array}
+					\right.
+\end{equation*}
+
+Sean $X_{(1)} = min(X_1,\dots,X_n)$ y $X_{(n)} = max(X_1,\dots,X_n)$.
+
+\begin{enumerate}
+\item[\bf{a.}] Definiendo $T = X_{(n)}-X_{(1)}$. ?`T es ancilar para  $\theta$?
+\item[\bf{b.}] ?`T es ancilar para  $\mu$? 
+\end{enumerate}
+
+% Ejercicio 6
+\item[\bf{4.}] Suponga que $X_1,\dots,X_n$ son variables aleatorias $i.i.d.$ con función de densidad:
+
+\begin{equation*}
+        f(x; \theta) = \theta(1+x)^{-(\theta+1)}\hspace{1cm}para\, x \geq 0
+\end{equation*}
+
+donde $\theta>0$ es un parámetro desconocido.
+
+\begin{enumerate}
+\item[\bf{a.}] Demuestre que $T$ definido como sigue, es suficiente para $\theta$.
+\begin{equation*}
+        T= \Sigma^{n}_{i=1} \ln(1+X_i)
+\end{equation*}
+
+\item[\bf{b.}] Encuentre $E(T), Var(T)$.
+\end{enumerate}
+
+% Ejercicio 7
+\item[\bf{5.}] Suponga que $X_1,\dots,X_n$ son variables aleatorias $i.i.d.$ con función de densidad:
+
+\begin{equation*}
+        f(x; \mu) = exp[-(x-\mu)] \hspace{1cm}para\, x \geq \mu
+\end{equation*}
+
+\begin{enumerate}
+\item[\bf{a.}] Demuestre que $Z_{(n)} = min(X_1,\dots,X_n)$ es un estadístico suficiente para $\theta$. 
+\item[\bf{b.}] Demuestre que $Z_{(n)}$ converge en probabilidad a $\mu$ cuando $n \rightarrow \infty$
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
