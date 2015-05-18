@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small ESTADÍSTICA MATEMÁTICA}}\\
+\textsf{\textbf{\small DEBER 02}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Fecha entrega: 2015/05/22}
+\end{flushright}
+
+\begin{center}
+\textsf{\textbf{\small EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+% Ejercicio 1
+\item[\bf{1.}] Pruebe que si
+\begin{equation*}
+        \lim_{n \rightarrow \infty} Var_\theta(\hat{\theta}_n)=0
+\end{equation*}
+
+entoncces $\hat{\theta}$ es un estimador insesgado de $\theta$.\\
+\emph{Sugerencia: Utilice la desigualdad de Chebyshev}
+
+% Ejercicio 2
+\item[\bf{2.}] Sean $X_1,X_2,\dots,X_n$ variables aleatorias independientes con:
+
+\begin{equation*}
+        E_\beta (X_i)=\beta t_i \hspace{0.5cm}y\hspace{0.5cm} Var_\beta (X_i)= \sigma^2
+\end{equation*}
+
+donde $t_1,t_2,\dots, t_n$ constantes conocidas, $\beta$, $\sigma^2$ parámetros desconocidos.
+Sea
+\begin{equation*}
+    \hat{\beta}_n = \displaystyle \frac{\Sigma_{i=1}^n t_i X_i}{\Sigma_{i=1}^n t^2_i}
+\end{equation*}
+pruebe que:
+\begin{enumerate}
+\item[\bf{a.}] $\hat{\beta}_n$ es un estimador insesgado de $\beta$ para cada $n$.  
+\item[\bf{b.}] $\hat{\beta}_n$ es consistente.
+\end{enumerate}
+
+
+% Ejercicio 3
+\item[\bf{3.}] Sean $X_1,X_2,\dots,X_n$ variables aleatorias $i.i.d$ de distribución de Pareto, con función de densidad:
+\begin{equation*}
+        f(x;\beta)=\frac{\beta}{x^{\beta+1}}, \hspace{0.5cm} x>1
+\end{equation*}
+
+utilice el método de momentos para probar que
+\begin{equation*}
+        \hat{\beta}=\frac{\overline{X}}{\overline{X}-1}
+\end{equation*}
+es un estimador de $\beta$.
+
+% Ejercicio 4
+\item[\bf{4.}] Sean $X_1,X_2,\dots,X_n$ variables aleatorias $i.i.d.$ de distribución
+$Gamma(\alpha,\lambda)$ con $\alpha,\lambda$ desconocidos. Encuentre los estimadores para
+$\alpha,\lambda$ utilizando el método de momentos.
+
+% Ejercicio 5
+\item[\bf{5.}] Suponga que $X_1,\dots,X_n$ son variables aleatorias $i.i.d.$ Exponenciales
+con parámetro $\lambda$. Pruebe que $\hat{\lambda}=\frac{1}{\overline{X}}$.
+
+\begin{enumerate}
+\item[\bf{a.}] Es el estimador de momentos de $\lambda$.
+\item[\bf{b.}] Encuentre su error estándar aproximado.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
