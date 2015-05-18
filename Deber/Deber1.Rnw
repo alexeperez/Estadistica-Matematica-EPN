@@ -151,8 +151,8 @@ donde $\theta>0$ es un parámetro desconocido.
 \end{equation*}
 
 \begin{enumerate}
-\item[\bf{a.}] Demuestre que $Z_{(n)} = min(X_1,\dots,X_n)$ es un estadístico suficiente para $\theta$. 
-\item[\bf{b.}] Demuestre que $Z_{(n)}$ converge en probabilidad a $\mu$ cuando $n \rightarrow \infty$
+\item[\bf{a.}] Demuestre que $Z_{(1)} = min(X_1,\dots,X_n)$ es un estadístico suficiente para $\mu$. 
+\item[\bf{b.}] Demuestre que $Z_{(1)}$ converge en probabilidad a $\mu$ cuando $n \rightarrow \infty$
 \end{enumerate}
 
 
