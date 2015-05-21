@@ -56,12 +56,12 @@
 
 \begin{enumerate}
 % Ejercicio 1
-\item[\bf{1.}] Pruebe que si
+\item[\bf{1.}] Sea $\hat{\theta}_n$ un estimador insesgado de $\theta$, pruebe que si
 \begin{equation*}
         \lim_{n \rightarrow \infty} Var_\theta(\hat{\theta}_n)=0
 \end{equation*}
 
-entoncces $\hat{\theta}$ es un estimador insesgado de $\theta$.\\
+entoncces $\hat{\theta}_n$ es un estimador consistente de $\theta$.\\
 \emph{Sugerencia: Utilice la desigualdad de Chebyshev}
 
 % Ejercicio 2
