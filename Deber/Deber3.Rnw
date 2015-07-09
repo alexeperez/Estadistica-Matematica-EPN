@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small ESTADÍSTICA MATEMÁTICA}}\\
+\textsf{\textbf{\small DEBER 03}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Fecha entrega: 2015/07/14}
+\end{flushright}
+
+\begin{center}
+\textsf{\textbf{\small EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+% Ejercicio 1
+\item[\bf{1.}] Suponga que $X_1,\dots,X_n$ son variables aleatorias $i.i.d.$ con función de densidad:
+
+\begin{equation*}
+        f(x; \theta_1,\theta_2) =\left\{\begin{array}{lll} a(\theta_1,\theta_2)h(x), &\mbox{si}\, \theta_1 \leq x \leq \theta_2,\\
+             	                             0,  &\mbox{caso contrario.}
+									\end{array}
+					\right.
+\end{equation*}
+
+donde $h(x)$ es una función continua, conocida, definida en los reales.
+
+\begin{enumerate}
+\item[\bf{a.}] Muestre que $X_{(1)}, X_{(n)}$ son MLEs de $\theta_1, \theta_2$ respectivamente.
+\item[\bf{b.}] Sean $\hat{\theta}_{1n}$ y $\hat{\theta}_{2n}$ MLEs de $\theta_1$ y $\theta_2$, suponga que 
+$h(\theta_1)=\lambda_1>0$ y $h(\theta_2)=\lambda_2>0$. Muestre que:
+\begin{equation*}
+n \left(\begin{array}{l} \hat{\theta}_{1n}-\theta_1\\
+                         \theta_2- \hat{\theta}_{2n}\\
+\end{array} \right) \rightarrow 
+
+\left(\begin{array}{l} Z_1\\
+                       Z_2}\\
+\end{array} \right)
+\end{equation*}
+
+donde $Z_1$ y $Z_2$ son variables independientes exponenciales de parámetros $\lamda_1 a(\theta_1,
+\theta_2)$ y $\lamda_2 a(\theta_1,\theta_2)$ respectivamente.
+\end{enumerate}
+
+
+% Ejercicio 2
+\item[\bf{2.}] Sean $X_1,\dots,X_n$ variables aleatorias $i.i.d.$ con función de densidad:
+\begin{equation*}
+f(x_i; \theta) = \frac{x}{\theta^2} e^{-x/\theta}
+\end{equation*}
+\begin{enumerate}
+\item[\bf{a.}] Encuentre el MLEs de $\theta$ basado en $X_i$ y en $X_1,\dots,X_n$.
+\item[\bf{b.}] Encuentre el MLEs de $k \theta$ basado en $X_1,\dots,X_n$, para $k$ una constante
+conocida.
+\item[\bf{c.}] Encuentre la distribución asintótica del MLEs de $k \theta$ basado en $X_1,\dots,X_n$
+y su error estándar.
+\end{enumerate}
+
+
+% Ejercicio 3
+\item[\bf{3.}] Sean $X_1,..., X_n$ variables aleatorias independientes y uniformemente distribuidas en el intervalo $[0, \theta ]$, con $\theta$ desconocido.
+
+\begin{enumerate}
+\item[\bf{a.}] Halle el estadístico de máxima verosimilitud $\hat{\theta}$ para $\theta$.
+\item[\bf{b.}] Halle la función de distribución de la variable aleatoria $\hat{\theta}$.
+\item[\bf{c.}] Calcule la esperanza y la varianza de $\hat{\theta}$.
+\item[\bf{d.}] Calcule $E[(\hat{\theta}-\theta)^{2}]$.
+\end{enumerate}
+
+
+% Ejercicio 4
+\item[\bf{4.}] Sean $X_1,\dots,X_n$ variables aleatorias $i.i.d.$ con función de densidad:
+\begin{equation*}
+        f(x; \theta) = \frac{1}{\sigma} exp[-\frac{x-\mu}{\sigma}] \hspace{1cm}para\, x \geq \mu
+\end{equation*}
+
+donde $\theta=(\mu, \sigma^2)$, $\mu \in (-\infty, \infty) y $\sigma>0$.
+\begin{enumerate}
+\item[\bf{a.}] Si $\sigma=1$ y $\mu$ desconocido encuentre y grafique la función de
+verosimilitud. Halle un MLE para $\mu$.
+\item[\bf{b.}] Si $\mu=2$ y $\sigma$ halle un MLE para $\sigma$.
+\end{enumerate}
+
+% Ejercicio 5
+\item[\bf{5.}] Sean $X_1,\dots,X_n$ variables aleatorias $i.i.d.$ con función de densidad:
+\begin{equation*}
+        f(x; \alpha, \beta) = \alpha^\beta \beta x^{-(\beta + 1)} \hspace{1cm} para\, 0< \alpha < x
+        \, y \, \beta >0.
+\end{equation*}
+
+\begin{enumerate}
+\item[\bf{a.}] Si $\alpha$ es conocido y $\beta$ desconocido, encuentre un MLE para $\beta$, 
+halle su distribución asintótica y encuentre su error estándar.
+\item[\bf{b.}] Si $\beta$ es conocido y $\alpha$, encuentre un MLE para $\alpha$.
+\end{enumerate}
+
+% Ejercicio 6
+\item[\bf{6.}] Considere el modelo de regresión lineal múltiple definido como:
+\begin{equation*}
+        Y_i = \beta_0 + \beta_1 x_{i2}+ \beta_1 x_{i3}+ \dots +  \beta_k x_{ik} + u_i \hspace{1cm} para\, i=1,\dots, n.
+\end{equation*}
+Suponiendo que $u_i -> N(0, \sigma^2)$, encuentre MLEs para $\beta_1, \dots, \beta_k$ basados en
+$Y_1,\dots, Y_n$.
+
+\end{enumerate}
+
+\end{document}
